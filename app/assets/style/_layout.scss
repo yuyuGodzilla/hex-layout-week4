@@ -1,0 +1,156 @@
+.header {
+  background-color: $primary;
+  color: $white;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile(){
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .header-logo-container{
+    padding-top: $spacer *0.5;
+    padding-bottom: $spacer *0.5;
+    @include mobile(){
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .header-logo{
+    display: block;
+    background-image: url("../images/logo-white.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    max-width: 80px;
+    height: 72px;
+    @include hide-text;
+  }
+
+  .header-nav{
+    display: flex;
+    justify-content: space-between;
+    gap: $spacer*8;
+
+    @include mobile(){
+      flex-wrap: wrap;
+      gap: 0px;
+    }
+  }
+
+  .header-nav-anchor{
+    font-size: 1.25rem;
+    @include mobile(){
+      width: 50%;
+      font-size: 1rem;
+      border: 1px solid $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a{
+      @include mobile(){
+        padding: $spacer*1.5 $spacer*7.75;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $primary;
+  color: $white;
+  padding-top: $spacer * 6;
+  padding-bottom: $spacer * 4;
+  @include pad(){
+    padding-bottom: $spacer *5;
+  }
+  @include mobile(){
+    padding-top: $spacer * 3;
+    padding-bottom: $spacer * 3;
+  }
+  .footer-main{
+    border-bottom: 1px solid $white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $spacer * 4;
+    @include mobile(){
+      margin-bottom: $spacer * 2;
+    }
+  }
+
+  .footer-menu{
+    display: flex;
+    justify-content: space-between;
+    gap: $spacer *6;
+    margin-bottom: $spacer *5.5;
+    @include mobile(){
+      display: none;
+    }
+  }
+
+  .footer-address{
+    font-size: 2.25rem;
+    margin-bottom: $spacer * 4;
+    @include mobile(){
+      font-size: 1rem;
+      margin-bottom: $spacer * 3;
+    }
+  }
+  .footer-address-icon{
+    font-size: 3rem;
+    @include mobile{
+      font-size: 1.5rem;
+    }
+  }
+
+  .footer-sns{
+    display: flex;
+    justify-content: space-between;
+    gap: $spacer*4;
+    @include pad(){
+      gap: $spacer*2;
+    }
+    @include mobile(){
+      gap: $spacer;
+    }
+  }
+  .footer-sns-logo{
+      width: 48px;
+    @include pad(){
+      width: 40px;
+    }
+    @include mobile(){
+      width: 24px;
+    }
+  }
+
+  .footer-others{
+    display: flex;
+    justify-content: space-between;
+    @include mobile(){
+      flex-direction: column;
+      gap: $spacer;
+    }
+  }
+
+  .footer-policy{
+    display: flex;
+    justify-content: space-between;
+    gap: $spacer * 6;
+
+    font-size: 0.875rem;
+    @include mobile(){
+      flex-direction: column;
+      gap: $spacer;
+
+      font-size: 1rem;
+    }
+  }
+}
